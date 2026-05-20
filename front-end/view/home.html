@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Home</title>
     <link rel="stylesheet" href="../css/home.css">
 </head>
@@ -40,9 +43,11 @@
                 <p>Somos uma Academia deArtes Marciais, a Iron Fight. Temos em foco algumas lutas, como: Boxe, Jiu Jtsu,
                     Mut
                     Thai, MMA, Judô e Krav Maga.</p>
-            
-                <button type="submit">Saiba mais -></button>
-                
+
+                <div class="button">
+                    <button type="submit">Saiba mais</button>
+                    <i class="bi bi-arrow-right"></i>
+                </div>
             </div>
             <div class="image">
                 <img src="../assets/espaco_academia.png" alt="Imagem da Academia">
@@ -57,16 +62,62 @@
 
         <div class="modalidades">
             <div class="teste">
-                <h2>Conheça as nossas </h2>
-                <span style="text-transform: uppercase; color: #3B8962;">modalidades</span>
+                 <h2>Conheça as nossas <span style="text-transform: uppercase; color: #3B8962;">modalidades</span></h2>    
             </div>
             <div class="teste2"></div>
+        </div>
+
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+
+        <div class="info">
+            <h4>academia <span style="color: #3B8962;">iron fight</span></h4>
+            <button type="submit">Agende sua aula experimental!</button>
         </div>
 
 
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="logof">
+            <!-- <img src="../assets/logo.jfif" alt="Imagem do logo da academia"> -->
+            <h5>academia de artes marciais</h5>
+        </div>
+
+        <div class="conteudo">
+            <div class="cardf">
+                <ul id="lista1">
+                    <li id="titulo">navegue</li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="sobrenos.html">Sobre Nós</a></li>
+                    <li><a href="modalidades.html">Modalidades</a></li>
+                    <li><a href="matriculese.html">Matricule-se</a></li>
+                    <li><a href="aluno.html">Área do Aluno</a></li>
+                    <li><a href="professor.html">Área do Professor</a></li>
+                </ul>
+            </div>
+
+            <div class="cardf">
+                <ul>
+                    <li id="titulo">contato</li>
+                    <li>ironfiht@outlook.com</li>
+                    <li>(18) 99999-9999</li>
+                </ul>
+            </div>
+
+            <div class="carf">
+                <ul>
+                    <li id="titulo">resdes sociais</li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Tik Tok</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
