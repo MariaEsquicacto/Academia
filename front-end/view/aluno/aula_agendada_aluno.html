@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Aulas Agendadas</title>
+    <link rel="stylesheet" href="../../css/aula_agendada_aluno.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../../assets/logo-equipe.png" alt="Logo da academia Iron Fight">
+            </div>
+            <div class="pags">
+                <ul id="ul-header">
+                    <li><a href="aluno.html" class="efeito">Home</a></li>
+                    <li><a href="calendario_aluno.html" class="efeito">Calendário</a></li>
+                    <li><a href="aula_agendada_aluno.html" class="efeito">Aulas Agendadas</a></li>
+                    <li><a href="aula_experimental_aluno.html" class="efeito">Aulas Experimentais</a></li>
+                    <div id="sair">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <li><a href="../home.html" id="link-sair">Sair</a></li>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        <div class="title">
+            <i class="bi bi-arrow-left-circle" onclick="Voltar()"></i>
+            <h1>aula agendada</h1>
+        </div>
+    </header>
+
+    <div class="modal-sair" id="modal-sair">
+
+        <div class="modal-content">
+
+
+            <div class="icon-sair">
+                <i class="bi bi-check-lg"></i>
+                <p>Você saiu da sua conta!</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <main>
+        <div class="conteudo">
+
+            <div class="filtro">
+                <div class="barra-pesquisa">
+                    <i class="bi bi-search"></i>
+                    <input type="text" id="pesquisa-aluno" placeholder="Pesquisar aluno por nome ou e-mail...">
+                </div>
+                <div class="barra-filtro">
+                    <i class="bi bi-funnel-fill"></i>
+                    <select id="filtro-modalidade">
+                        <option value="">Modalidades</option>
+                        <option value="Boxe">Boxe</option>
+                        <option value="Jiu Jitsu">Jiu Jitsu</option>
+                        <option value="Judô">Judô</option>
+                        <option value="Krav Maga">Krav Maga</option>
+                        <option value="MMA">MMA</option>
+                        <option value="Muay Thai">Muay Thai</option>
+                    </select>
+                </div>
+            </div>
+            <div id="lista-aulas">
+                <!-- <div class="card-conteudo">
+                    <div class="info">
+                        <ul id="ul-conteudo">
+                            <li id="li-conteudo">Muay Thai</li>
+                        </ul>
+                        <hr>
+                        <div class="informacoes">
+                            <div class="dados">
+                                <i class="bi bi-calendar4"></i>
+                                <p>12/04/2026</p>
+                            </div>
+                            <div class="dados">
+                                <i class="bi bi-clock"></i>
+                                <p>19:00 - 20:00</p>
+                            </div>
+                            <div class="dados">
+                                <i class="bi bi-people"></i>
+                                <p>12 alunos</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr id="hr2">
+                    <br>
+                    <div class="buton">
+                        <button type="submit" id="cancelar"><i class="bi bi-trash"></i>Cancelar</button>
+                        <button type="submit" id="editar"><i class="bi bi-pencil"></i>Editar</button>
+                    </div>
+                </div> -->
+
+                <!-- <div class="card-conteudojj">
+                    <div class="info-jj">
+                        <ul id="ul-conteudo">
+                            <li id="li-conteudo-jj">Jiu Jitsu</li>
+                        </ul>
+                        <hr>
+                        <div class="informacoes">
+                            <div class="dados">
+                                <i class="bi bi-calendar4"></i>
+                                <p>12/04/2026</p>
+                            </div>
+                            <div class="dados">
+                                <i class="bi bi-clock"></i>
+                                <p>19:00 - 20:00</p>
+                            </div>
+                            <div class="dados">
+                                <i class="bi bi-people"></i>
+                                <p>12 alunos</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr id="hr2">
+                    <br>
+                    <div class="buton">
+                        <button type="submit" id="cancelar"><i class="bi bi-trash"></i>Cancelar</button>
+                        <button type="submit" id="editar"><i class="bi bi-pencil"></i>Editar</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="logof">
+            <img src="../../assets/logo-equipe.png" alt="Imagem do logo da academia">
+            <h5>academia de artes marciais</h5>
+        </div>
+
+        <div class="conteudof">
+            <div class="cardf">
+                <ul id="lista1">
+                    <li id="titulo">navegue</li>
+                    <li><a href="../home.html" class="efeito">Home</a></li>
+                    <li><a href="../sobrenos.html" class="efeito">Sobre Nós</a></li>
+                    <li><a href="../home.html?#modalidades" class="efeito">Modalidades</a></li>
+                    <li><a href="../matriculese.html" class="efeito">Matricule-se</a></li>
+                    <li><a href="../aluno/aluno.html" class="efeito">Área do Aluno</a></li>
+                    <li><a href="../professor/professor.html" class="efeito">Área do Professor</a></li>
+                </ul>
+            </div>
+
+            <div class="cardf">
+                <ul class="ul-footer">
+                    <li id="titulo">contato</li>
+                    <li class="efeito">ironfight@outlook.com</li>
+                    <li class="efeito">(18) 99999-9999</li>
+                </ul>
+            </div>
+
+            <div class="cardf redes">
+                <ul class="ul-footer">
+                    <li id="titulo">resdes sociais</li>
+                    <li><a href="#" class="efeito">Instagram</a></li>
+                    <li><a href="#" class="efeito">Tik Tok</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // MODAL SAIR
+        const modalSair = document.getElementById("modal-sair");
+        const linkSair = document.getElementById("link-sair");
+
+        linkSair.addEventListener("click", function (event) {
+            event.preventDefault();
+            modalSair.classList.add("active");
+
+            setTimeout(() => {
+                window.location.href = "../home.html";
+            }, 3000);
+        });
+
+        // FUNÇÃO VOLTAR
+        function Voltar() {
+            window.location.href = "aluno.html";
+        }
+
+        const listaAulas = document.getElementById("lista-aulas");
+
+        // CORES DAS MODALIDADES
+        const coresModalidades = {
+            "Boxe": "#3B8962",
+            "Jiu Jitsu": "#FFD900",
+            "MMA": "#c20d0d",
+            "Krav Maga": "#0163E4",
+            "Muay Thai": "#3B8962",
+            "Judô": "#FF7B00"
+        };
+
+        // FUNÇÃO PARA CRIAR CARD
+        function criarCard(aula) {
+            const cor = coresModalidades[aula.modalidade] || "#666";
+            const novoCard = document.createElement("div");
+            novoCard.classList.add("card-conteudo");
+
+            novoCard.innerHTML = `
+                <div class="info" style="border-left: 8px solid ${cor}">
+                    <ul id="ul-conteudo">
+                        <li class="titulo-modalidade" style="--cor-marker:${cor}">
+                            ${aula.modalidade}
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="informacoes">
+                        <div class="dados">
+                            <i class="bi bi-calendar4"></i>
+                            <p>${aula.data}</p>
+                        </div>
+                        <div class="dados">
+                            <i class="bi bi-clock"></i>
+                            <p>${aula.horaInicial} - ${aula.horaFinal}</p>
+                        </div>
+                        <div class="dados">
+                            <i class="bi bi-people"></i>
+                            <p>${aula.qtd}</p>
+                        </div>
+                        <div class="dados">
+                            <i class="bi bi-person"></i>
+                            <p>${aula.professor}</p>
+                        </div>
+                    </div>
+                </div>
+                <hr id="hr2">
+                <br>
+                <div class="buton" id="area-botoes-${aula.id}">
+                    <button type="button" id="cancelar">
+                        <i class="bi bi-trash"></i> Cancelar
+                    </button>
+                    <button type="button" id="confirmar">
+                        Confirmar
+                    </button>
+                </div>
+            `;
+
+            listaAulas.appendChild(novoCard);
+
+            const areaBotoes = novoCard.querySelector(`#area-botoes-${aula.id}`);
+            const botaoCancelar = novoCard.querySelector("#cancelar");
+            const botaoConfirmar = novoCard.querySelector("#confirmar");
+
+            let statusAulas = JSON.parse(localStorage.getItem("statusAulas")) || {};
+
+            if (statusAulas[aula.id] === "cancelado") {
+                areaBotoes.innerHTML = `
+                    <button type="button" style="width: 120px; background:#A51313; color:white; border:none; height:35px; border-radius:10px; font-weight:400; margin-right: 15px; margin-bottom: 5px; font-size: 18px;">
+                        Cancelado
+                    </button>
+                `;
+            }
+
+            if (statusAulas[aula.id] === "confirmado") {
+                areaBotoes.innerHTML = `
+                    <button type="button" style="width:120px; background:#3B8962; color:white; border:none; height:35px; border-radius:10px; font-weight:400; font-size: 18px; margin-right: 15px; margin-bottom: 5px;">
+                        Confirmado
+                    </button>
+                `;
+            }
+
+            botaoCancelar.addEventListener("click", function () {
+                statusAulas[aula.id] = "cancelado";
+                localStorage.setItem("statusAulas", JSON.stringify(statusAulas));
+                areaBotoes.innerHTML = `
+                    <button type="button" style="width:100%; background:#c1121f; color:white; border:none; height:45px; border-radius:10px; font-weight:600;">
+                        Cancelado
+                    </button>
+                `;
+            });
+
+            botaoConfirmar.addEventListener("click", function () {
+                statusAulas[aula.id] = "confirmado";
+                localStorage.setItem("statusAulas", JSON.stringify(statusAulas));
+                areaBotoes.innerHTML = `
+                    <button type="button" style="width:100%; background:#2d6a4f; color:white; border:none; height:45px; border-radius:10px; font-weight:600;">
+                        Confirmado
+                    </button>
+                `;
+            });
+        }
+
+       
+        //  CONTROLE DE ACESSO E LOGICA DE FILTRAGEM 
+        
+
+        // 1. Recupera as credenciais do Aluno Logado
+        const alunoLogado = JSON.parse(localStorage.getItem("usuarioLogado")) || {};
+
+    
+        const modalidadesDoAluno = alunoLogado.modalidadesMatriculadas || [];
+
+        const baseAulasSalvas = JSON.parse(localStorage.getItem("aulas")) || [];
+
+        // 4. Filtra apenas o que é do tipo "agendada" E pertence ao plano contratado do aluno
+        let aulasOriginais = baseAulasSalvas.filter(aula => {
+            
+            return aula && aula.tipo === "agendada" && aula.modalidade && modalidadesDoAluno.includes(aula.modalidade);
+        });
+
+        // --- CARREGAMENTO INICIAL DA TELA ---
+        if (aulasOriginais.length === 0) {
+            listaAulas.innerHTML = `<p style="text-align:center; font-size:24px; margin-top:10%; color:#666; font-weight:500;">Nenhuma aula disponível para sua modalidade.</p>`;
+        } else {
+            aulasOriginais.forEach(aula => criarCard(aula));
+        }
+
+     
+        // SISTEMA DE FILTRO E BARRA DE PESQUISA (Combina Busca + Tipo)
+       
+        const inputPesquisa = document.getElementById("pesquisa-aluno");
+        const selectFiltro = document.getElementById("filtro-modalidade");
+
+        function aplicarBuscaEFiltro() {
+            const texto = inputPesquisa.value.toLowerCase();
+            const filtro = selectFiltro.value;
+
+            const resultado = aulasOriginais.filter(aula => {
+                const matchBusca = aula.modalidade.toLowerCase().includes(texto);
+                const matchFiltro = filtro === "" || aula.modalidade === filtro;
+                return matchBusca && matchFiltro;
+            });
+
+            listaAulas.innerHTML = "";
+
+            if (resultado.length === 0) {
+                listaAulas.innerHTML = `
+                    <p style="text-align:center; font-size:24px; margin-top:10%; color:#666; font-weight:500;">
+                        Nenhuma aula encontrada
+                    </p>
+                `;
+                return;
+            }
+
+            resultado.forEach(aula => criarCard(aula));
+        }
+
+        inputPesquisa.addEventListener("input", aplicarBuscaEFiltro);
+        selectFiltro.addEventListener("change", aplicarBuscaEFiltro);
+    </script>
+</body>
+
+</html>

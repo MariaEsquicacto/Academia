@@ -10,8 +10,8 @@
         href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <title>Home</title>
-    <link rel="stylesheet" href="../css/home.css">
+    <title>Matricule-se</title>
+    <link rel="stylesheet" href="../css/matriculese.css">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
                 <ul id="ul-header">
                     <li><a href="home.html" class="efeito">Home</a></li>
                     <li><a href="sobrenos.html" class="efeito">Sobre-nós</a></li>
-                    <li><a href="#modalidades" class="efeito">Modalidades</a></li>
+                    <li><a href="home.html?#modalidades" class="efeito">Modalidades</a></li>
                     <div id="matriculese">
                         <li><a href="matriculese.html">Matricule-se</a></li>
                     </div>
@@ -37,6 +37,10 @@
                 </ul>
             </div>
         </nav>
+        <div class="title">
+            <i class="bi bi-arrow-left-circle" onclick="Voltar()"></i>
+            <h1>matricuele-se</h1>
+        </div>
     </header>
 
     <!-- MODAL ALUNO-->
@@ -49,7 +53,7 @@
             </span>
 
             <form action="" method="" id="form-login">
-                <div class="login">
+                <div class="login-modal">
                     <h6>Sign In</h6>
                 </div>
                 <div class="card-modal">
@@ -67,9 +71,10 @@
                     <div class="esqueci-senha">
                         <a href="#">Esqueci minha senha</a>
                     </div>
+
                     <br>
 
-                    <hr id="hr-form">
+                    <hr id="hr-modal">
                     <p>Não possui uma matrícula? <a href="matriculese.html">Matricule-se</a></p>
                 </div>
             </form>
@@ -88,7 +93,7 @@
             </span>
 
             <form action="" method="" id="form-login-professor">
-                <div class="login">
+                <div class="login-modal">
                     <h6>Sign In</h6>
                 </div>
                 <div class="card-modal">
@@ -108,7 +113,7 @@
                     </div>
                     <br>
 
-                    <hr id="hr-form">
+                    <hr id="hr-modal">
                     <p>Não possui uma matrícula? <a href="matriculese.html">Matricule-se</a></p>
                 </div>
             </form>
@@ -117,71 +122,90 @@
 
     </div>
 
-
     <main>
-        <div class="conteiner">
-            <div class="card">
-                <h1>Quem Somos</h1>
-                <p>Somos uma Academia de Artes Marciais, a Iron Fight. Temos em foco algumas lutas, como: <strong>Boxe,
-                        Jiu Jtsu,
-                        Mut
-                        Thai, MMA, Judô e Krav Maga.</strong></p>
+        <form action="" method="" class="form-pagina">
 
-                <div class="button">
-                    <a href="sobrenos.html"><button type="submit">Saiba mais</button>
-                        <i class="bi bi-arrow-right"></i></a>
+            <div class="card-formulario">
+                <div class="foto-formulario">
+                    <div class="foto"></div>
+                    <button type="submit" id="button-foto">Adicionar/Alterar</button>
+                </div>
+
+                <div class="card">
+                    <label for="text">Nome:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo">
+
+                    <br>
+
+                    <label for="date">Data de Nascimento:</label>
+                    <input type="date" name="nascimento" id="nascimento">
+
+                    <br>
+
+                    <label for="select">Modalidades:</label>
+                    <select name="modalidades" id="modalidades">
+                        <option value=""></option select>
+                        <option value="Boxe">Boxe</option>
+                        <option value="Jiu Jitsu">Jiu Jitsu</option>
+                        <option value="Judô">Judô</option>
+                        <option value="Krav Maga">Krav Maga</option>
+                        <option value="MMA">MMA</option>
+                        <option value="Muay Thai">Muay Thai</option>
+                    </select>
+                </div>
+            </div>
+
+            <hr id="hr-pagina">
+
+            <div class="card-formulario">
+                <div class="card">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email1" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                        placeholder="Digite seu e-mail">
+
+                    <br>
+
+                    <label for="tell">Telefone:</label>
+                    <input type="tel" name="telefone" id="telefone" pattern="\(\d{2}\)\s\d{5}-\d{4}" title=“(99)
+                        99999-9999” placeholder="Digite seu número de telefone">
+                </div>
+
+                <div class="card">
+                    <label for="text">Endereço:</label>
+                    <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço">
+
+                    <br>
+
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha1" id="senha">
 
                 </div>
             </div>
-            <div class="image">
-                <img src="../assets/espaco_academia.png" alt="Imagem da Academia">
+
+
+
+            <br>
+
+            <div class="buton">
+                <button id="cancelar"><i class="bi bi-trash"></i>Cancelar</button>
+                <button type="submit" id="salvar" class="link-sair"><i class="bi bi-floppy"></i>Salvar</button>
             </div>
-        </div>
-
-        <br>
-        <br>
-        <hr>
-
-
-
-        <div class="modalidades" id="modalidades">
-            <div class="centro">
-                <h2>
-                    Conheça as nossas
-                    <span>modalidades</span>
-                </h2>
-            </div>
-            <div class="campo-luta">
-
-                <a href="modalidades.html?luta=boxe" class="lutas boxe"><span>Boxe</span></a>
-                <a href="modalidades.html?luta=jj" class="lutas jj"><span>Jiu Jitsu</span></a>
-                <a href="modalidades.html?luta=mt" class="lutas mt"><span>Muay Thai</span></a>
-                <a href="modalidades.html?luta=mma" class="lutas mma"><span>MMA</span></a>
-                <a href="modalidades.html?luta=judo" class="lutas judo"><span>Judô</span></a>
-                <a href="modalidades.html?luta=km" class="lutas km"><span>Krav Maga</span></a>
-
-            </div>
-            <div class="centro2"></div>
-        </div>
-
-
-        <hr id="hrluta">
-        <br>
-        <br>
-
-
-        <div class="info">
-            <h4>academia <span style="color: #3B8962;">iron fight</span></h4>
-            <button type="submit">Agende sua aula experimental!</button>
-        </div>
-
-        <br>
-        <br>
-        <hr>
-        <br>
-        <br>
-
+        </form>
     </main>
+
+    <div class="modal-concluir" id="modal-concluir">
+
+        <div class="modal-content-concluir">
+
+
+            <div class="concluir">
+                <i class="bi bi-check-lg"></i>
+                <p>Matrícula realizada com sucesso!</p>
+            </div>
+
+        </div>
+
+    </div>
 
     <footer>
         <div class="logof">
@@ -189,7 +213,7 @@
             <h5>academia de artes marciais</h5>
         </div>
 
-        <div class="conteudo">
+        <div class="conteudof">
             <div class="cardf">
                 <ul id="lista1">
                     <li id="titulo">navegue</li>
@@ -197,8 +221,8 @@
                     <li><a href="sobrenos.html" class="efeito">Sobre Nós</a></li>
                     <li><a href="modalidades.html" class="efeito">Modalidades</a></li>
                     <li><a href="matriculese.html" class="efeito">Matricule-se</a></li>
-                    <li><a href="./aluno/aluno.html" class="efeito">Área do Aluno</a></li>
-                    <li><a href="./professor/professor.html" class="efeito">Área do Professor</a></li>
+                    <li><a href="aluno.html" class="efeito">Área do Aluno</a></li>
+                    <li><a href="professor.html" class="efeito">Área do Professor</a></li>
                 </ul>
             </div>
 
@@ -222,85 +246,42 @@
 
     <script>
 
-        // ANIMAÇÃO AO ROLAR A PÁGINA
+        // MODAL PARA ABRIR O ÁREa PROFESSOR
+        // MODAL PROFESSOR
 
-        const modalidades = document.querySelectorAll(".lutas");
+        const modalProfessor = document.getElementById("modal-professor");
 
-        const observer = new IntersectionObserver((entries) => {
+        const abrirModalProfessor = document.getElementById("professor");
 
-            entries.forEach((entry) => {
+        const fecharModalProfessor = document.getElementById("fecharmodal-professor");
 
-                if (entry.isIntersecting) {
 
-                    entry.target.classList.add("show");
+        // ABRIR
+        abrirModalProfessor.addEventListener("click", () => {
 
-                }
-
-            });
-
-        }, {
-            threshold: 0.1
-        });
-
-        modalidades.forEach((card) => {
-
-            observer.observe(card);
+            modalProfessor.classList.add("active");
 
         });
 
 
-        // ANIMAÇÃO INFO
+        // FECHAR
+        fecharModalProfessor.addEventListener("click", () => {
 
-        const infoTitulo = document.querySelector(".info h4");
-
-        const infoButton = document.querySelector(".info button");
-
-        const observerInfo = new IntersectionObserver((entries) => {
-
-            entries.forEach((entry) => {
-
-                if (entry.isIntersecting) {
-
-                    infoTitulo.classList.add("show");
-
-                    infoButton.classList.add("show");
-
-                }
-
-            });
-
-        }, {
-            threshold: 0.2
-        });
-
-        observerInfo.observe(document.querySelector(".info"));
-
-        // ANIMAÇÃO FOOTER
-
-        const footerItens = document.querySelectorAll(".logof, .cardf");
-
-        const observerFooter = new IntersectionObserver((entries) => {
-
-            entries.forEach((entry) => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("show");
-
-                }
-
-            });
-
-        }, {
-            threshold: 0.2
-        });
-
-        footerItens.forEach((item) => {
-
-            observerFooter.observe(item);
+            modalProfessor.classList.remove("active");
 
         });
 
+
+        // FECHAR CLICANDO FORA
+        modalProfessor.addEventListener("click", (event) => {
+
+            if (event.target === modalProfessor) {
+
+                modalProfessor.classList.remove("active");
+
+            }
+
+        });
 
         // MODAL PARA ABRIR O ÁREA ALUNO
 
@@ -329,63 +310,65 @@
 
         });
 
+        //FUNÇÃO VOLTAR
 
-        // LOGIN
-        const form = document.getElementById("form-login");
+        function Voltar() {
+            window.location.href = "home.html";
+        }
 
-        form.addEventListener("submit", function (event) {
+        const formulario = document.querySelector(".form-pagina");
+        const modalConcluir = document.getElementById("modal-concluir");
 
-            // impede recarregar
-            event.preventDefault();
+        // =====================
+        // CADASTRO
+        // =====================
+        formulario.addEventListener("submit", function (e) {
+            e.preventDefault();
 
-            // pega valores
-            const email = document.getElementById("email").value;
-            const senha = document.getElementById("senha").value;
+            const nome = document.getElementById("nome").value.trim();
+            const nascimento = document.getElementById("nascimento").value.trim();
+            const modalidade = document.getElementById("modalidades").value.trim();
+            const email = document.querySelector(".form-pagina input[type='email']").value.trim();
+            const telefone = document.getElementById("telefone").value.trim();
+            const endereco = document.getElementById("endereco").value.trim();
+            const senha = document.querySelector(".form-pagina input[type='password']").value.trim();
 
-            // verifica campos
-            if (email !== "" && senha !== "") {
-
-                // redireciona
-                window.location.href = "aluno/aluno.html";
-            } else {
+            if (!nome || !nascimento || !modalidade || !email || !telefone || !endereco || !senha) {
                 alert("Preencha todos os campos!");
+                return;
             }
 
-        });
+            let alunos = JSON.parse(localStorage.getItem("alunos")) || [];
 
+            const existe = alunos.some(a => a.email === email);
 
-        // MODAL PARA ABRIR O ÁREa PROFESSOR
-
-        const modalProfessor = document.getElementById("modal-professor");
-
-        const abrirModalProfessor = document.getElementById("professor");
-
-        const fecharModalProfessor = document.getElementById("fecharmodal-professor");
-
-        // ABRIR
-        abrirModalProfessor.addEventListener("click", () => {
-
-            modalProfessor.classList.add("active");
-
-        });
-
-        // FECHAR
-        fecharModalProfessor.addEventListener("click", () => {
-
-            modalProfessor.classList.remove("active");
-
-        });
-
-        // FECHAR CLICANDO FORA
-        modalProfessor.addEventListener("click", (event) => {
-
-            if (event.target === modalProfessor) {
-
-                modalProfessor.classList.remove("active");
-
+            if (existe) {
+                alert("Esse email já está cadastrado!");
+                return;
             }
 
+            alunos.push({
+                nome,
+                nascimento,
+                // Alteração aqui: transforma a string do select em uma lista
+                modalidadesMatriculadas: [modalidade],
+                email,
+                telefone,
+                endereco,
+                senha
+            });
+
+            localStorage.setItem("alunos", JSON.stringify(alunos));
+
+            modalConcluir.classList.add("active");
+
+            formulario.reset();
+
+            setTimeout(() => {
+                modalConcluir.classList.remove("active");
+            }, 2000);
         });
+
 
         //LOGIN ALUNO
         const formLoginAluno = document.getElementById("form-login");
@@ -441,6 +424,9 @@
                 alert("Email ou senha incorretos!");
             }
         });
+
+
+
     </script>
 </body>
 
